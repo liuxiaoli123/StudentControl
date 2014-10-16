@@ -1,0 +1,1541 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:Common.BaseAdminPage">
+            <summary>
+            定义的重新处理页面类
+            </summary>
+        </member>
+        <member name="M:Common.BaseDal`1.ConditionToSql(System.String)">
+            <summary>
+            根据输入的条件返回相应的SQL,主要为了节省子类的代码
+            </summary>
+            <param name="nID"></param>
+        </member>
+        <member name="M:Common.BaseDal`1.Delete(System.String)">
+            <summary>
+            删除内容
+            </summary>
+            <param name="nID"></param>
+        </member>
+        <member name="M:Common.BaseDal`1.Get_Num(System.String)">
+            <summary>
+            按条件查看数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseDal`1.Get_List(System.Int32,System.Int32,System.String)">
+            <summary>
+             从存储过程获取LIST
+            </summary>
+            <param name="CurrentPage"></param>
+            <param name="PageSize"></param>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseDal`1.Get_List(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+             从存储过程获取LIST
+            </summary>
+            <param name="CurrentPage"></param>
+            <param name="PageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BaseTeacherPage">
+            <summary>
+            定义的重新处理页面类
+            </summary>
+        </member>
+        <member name="E:Common.CaptureSocket.OnClientMsg">
+            <summary>
+            显示事件
+            </summary>
+            
+        </member>
+        <member name="M:Common.ClientSocket.SendStrMsg(System.String)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="E:Common.ClientSocket.OnServerMsg">
+            <summary>
+            显示事件
+            </summary>
+            
+        </member>
+        <member name="T:Common.StudentSocketPacket">
+            <summary>
+            数据包
+            </summary>
+        </member>
+        <!-- 对于成员“P:Common.ControlDgProgressbarColumn.Maximum”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:Common.ControlDgProgressbarColumn.Mimimum”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“T:Common.DataGridViewProgressBarCell”忽略有格式错误的 XML 注释 -->
+        <member name="T:Common.FileOp">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="M:Common.FileOp.GetPostfixStr(System.String)">
+            <summary>
+            取后缀名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>.gif|.html格式</returns>
+        </member>
+        <member name="M:Common.FileOp.RemovePostfixStr(System.String)">
+            <summary>
+            去掉后缀名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>.gif|.html格式</returns>
+        </member>
+        <member name="M:Common.FileOp.WriteFile(System.String,System.String)">
+            <summary>
+            写文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <param name="Strings">文件内容</param>
+        </member>
+        <member name="M:Common.FileOp.ReadFile(System.String)">
+            <summary>
+            读文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FileOp.FileAdd(System.String,System.String)">
+            <summary>
+            追加文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <param name="strings">内容</param>
+        </member>
+        <member name="M:Common.FileOp.FileCoppy(System.String,System.String)">
+            <summary>
+            拷贝文件
+            </summary>
+            <param name="OrignFile">原始文件</param>
+            <param name="NewFile">新文件路径</param>
+        </member>
+        <member name="M:Common.FileOp.FileDel(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="Path">路径</param>
+        </member>
+        <member name="M:Common.FileOp.FileMove(System.String,System.String)">
+            <summary>
+            移动文件
+            </summary>
+            <param name="OrignFile">原始路径</param>
+            <param name="NewFile">新路径</param>
+        </member>
+        <member name="M:Common.FileOp.FolderCreate(System.String,System.String)">
+            <summary>
+            在当前目录下创建目录
+            </summary>
+            <param name="OrignFolder">当前目录</param>
+            <param name="NewFloder">新目录</param>
+        </member>
+        <member name="M:Common.FileOp.DeleteFolder(System.String)">
+            <summary>
+            递归删除文件夹目录及文件
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FileOp.FileExist(System.String)">
+            <summary>
+            查找文件是否存在
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FileOp.FolderExist(System.String)">
+            <summary>
+            查找文件是否存在
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FileOp.CopyDir(System.String,System.String)">
+            <summary>
+            指定文件夹下面的所有内容copy到目标文件夹下面
+            </summary>
+            <param name="srcPath">原始路径</param>
+            <param name="aimPath">目标文件夹</param>
+        </member>
+        <member name="M:Common.FileOp.FileListFromDirecory(System.String)">
+            <summary>
+            递归某个文件夹下的所有文件
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FileOp.getFileSize(System.Int64)">
+            <summary>
+            返回某个文件的大小
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.FTP">
+            <summary>
+            FTP类
+            </summary>
+        </member>
+        <member name="F:Common.FTP.server">
+            <summary>
+            服务器连接地址
+            </summary>
+        </member>
+        <member name="F:Common.FTP.user">
+            <summary>
+            登陆帐号
+            </summary>
+        </member>
+        <member name="F:Common.FTP.pass">
+            <summary>
+            登陆口令
+            </summary>
+        </member>
+        <member name="F:Common.FTP.port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="F:Common.FTP.timeout">
+            <summary>
+            无响应时间（FTP在指定时间内无响应）
+            </summary>
+        </member>
+        <member name="F:Common.FTP.errormessage">
+            <summary>
+            服务器错误状态信息
+            </summary>
+        </member>
+        <member name="F:Common.FTP.messages">
+            <summary>
+            服务器状态返回信息
+            </summary>
+        </member>
+        <member name="F:Common.FTP.responseStr">
+            <summary>
+            服务器的响应信息
+            </summary>
+        </member>
+        <member name="F:Common.FTP.passive_mode">
+            <summary>
+            链接模式（主动或被动，默认为被动）
+            </summary>
+        </member>
+        <member name="F:Common.FTP.bytes_total">
+            <summary>
+            上传或下载信息字节数
+            </summary>
+        </member>
+        <member name="F:Common.FTP.file_size">
+            <summary>
+            上传或下载的文件大小
+            </summary>
+        </member>
+        <member name="F:Common.FTP.main_sock">
+            <summary>
+            主套接字
+            </summary>
+        </member>
+        <member name="F:Common.FTP.main_ipEndPoint">
+            <summary>
+            要链接的网络地址终结点
+            </summary>
+        </member>
+        <member name="F:Common.FTP.listening_sock">
+            <summary>
+            侦听套接字
+            </summary>
+        </member>
+        <member name="F:Common.FTP.data_sock">
+            <summary>
+            数据套接字
+            </summary>
+        </member>
+        <member name="F:Common.FTP.data_ipEndPoint">
+            <summary>
+            要链接的网络数据地址终结点
+            </summary>
+        </member>
+        <member name="F:Common.FTP.file">
+            <summary>
+            用于上传或下载的文件流对象
+            </summary>
+        </member>
+        <member name="F:Common.FTP.response">
+            <summary>
+            与FTP服务器交互的状态值
+            </summary>
+        </member>
+        <member name="F:Common.FTP.bucket">
+            <summary>
+            读取并保存当前命令执行后从FTP服务器端返回的数据信息
+            </summary>
+        </member>
+        <member name="M:Common.FTP.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Common.FTP.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="server">服务器IP或名称</param>
+            <param name="user">登陆帐号</param>
+            <param name="pass">登陆口令</param>
+        </member>
+        <member name="M:Common.FTP.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="server">服务器IP或名称</param>
+            <param name="port">端口号</param>
+            <param name="user">登陆帐号</param>
+            <param name="pass">登陆口令</param>
+        </member>
+        <member name="M:Common.FTP.#ctor(System.String,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="server">服务器IP或名称</param>
+            <param name="port">端口号</param>
+            <param name="user">登陆帐号</param>
+            <param name="pass">登陆口令</param>
+            <param name="mode">链接方式</param>
+        </member>
+        <member name="M:Common.FTP.#ctor(System.String,System.Int32,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="server">服务器IP或名称</param>
+            <param name="port">端口号</param>
+            <param name="user">登陆帐号</param>
+            <param name="pass">登陆口令</param>
+            <param name="mode">链接方式</param>
+            <param name="timeout">无响应时间(限时),单位:秒 (小于或等于0为不受时间限制)</param>
+        </member>
+        <member name="M:Common.FTP.Fail">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="M:Common.FTP.SetBinaryMode(System.Boolean)">
+            <summary>
+            下载文件类型
+            </summary>
+            <param name="mode">true:二进制文件 false:字符文件</param>
+        </member>
+        <member name="M:Common.FTP.SendCommand(System.String)">
+            <summary>
+            发送命令
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:Common.FTP.ReadResponse">
+            <summary>
+            返回服务器端返回信息
+            </summary>
+        </member>
+        <member name="M:Common.FTP.OpenDataSocket">
+            <summary>
+            打开数据套接字
+            </summary>
+        </member>
+        <member name="M:Common.FTP.Disconnect">
+            <summary>
+            关闭所有链接
+            </summary>
+        </member>
+        <member name="M:Common.FTP.Connect(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            链接到FTP服务器
+            </summary>
+            <param name="server">要链接的IP地址或主机名</param>
+            <param name="port">端口号</param>
+            <param name="user">登陆帐号</param>
+            <param name="pass">登陆口令</param>
+        </member>
+        <member name="M:Common.FTP.Connect(System.String,System.String,System.String)">
+            <summary>
+            链接到FTP服务器
+            </summary>
+            <param name="server">要链接的IP地址或主机名</param>
+            <param name="user">登陆帐号</param>
+            <param name="pass">登陆口令</param>
+        </member>
+        <member name="M:Common.FTP.Connect">
+            <summary>
+            链接到FTP服务器
+            </summary>
+        </member>
+        <member name="M:Common.FTP.List">
+            <summary>
+            获取FTP当前(工作)目录下的文件列表
+            </summary>
+            <returns>返回文件列表数组</returns>
+        </member>
+        <member name="M:Common.FTP.ListFiles">
+            <summary>
+            获取到文件名列表
+            </summary>
+            <returns>返回文件名列表</returns>
+        </member>
+        <member name="M:Common.FTP.ListDirectories">
+            <summary>
+            获取路径列表
+            </summary>
+            <returns>返回路径列表</returns>
+        </member>
+        <member name="M:Common.FTP.GetFileDateRaw(System.String)">
+            <summary>
+            获取原始数据信息.
+            </summary>
+            <param name="fileName">远程文件名</param>
+            <returns>返回原始数据信息.</returns>
+        </member>
+        <member name="M:Common.FTP.GetFileDate(System.String)">
+            <summary>
+            得到文件日期.
+            </summary>
+            <param name="fileName">远程文件名</param>
+            <returns>返回远程文件日期</returns>
+        </member>
+        <member name="M:Common.FTP.GetWorkingDirectory">
+            <summary>
+            获取FTP上的当前(工作)路径
+            </summary>
+            <returns>返回FTP上的当前(工作)路径</returns>
+        </member>
+        <member name="M:Common.FTP.ChangeDir(System.String)">
+            <summary>
+            跳转服务器上的当前(工作)路径
+            </summary>
+            <param name="path">要跳转的路径</param>
+        </member>
+        <member name="M:Common.FTP.MakeDir(System.String)">
+            <summary>
+            创建指定的目录
+            </summary>
+            <param name="dir">要创建的目录</param>
+        </member>
+        <member name="M:Common.FTP.RemoveDir(System.String)">
+            <summary>
+            移除FTP上的指定目录
+            </summary>
+            <param name="dir">要移除的目录</param>
+        </member>
+        <member name="M:Common.FTP.RemoveFile(System.String)">
+            <summary>
+            移除FTP上的指定文件
+            </summary>
+            <param name="filename">要移除的文件名称</param>
+        </member>
+        <member name="M:Common.FTP.RenameFile(System.String,System.String)">
+            <summary>
+            重命名FTP上的文件
+            </summary>
+            <param name="oldfilename">原文件名</param>
+            <param name="newfilename">新文件名</param>
+        </member>
+        <member name="M:Common.FTP.GetFileSize(System.String)">
+            <summary>
+            获得指定文件的大小(如果FTP支持)
+            </summary>
+            <param name="filename">指定的文件</param>
+            <returns>返回指定文件的大小</returns>
+        </member>
+        <member name="M:Common.FTP.OpenUpload(System.String)">
+            <summary>
+            上传指定的文件
+            </summary>
+            <param name="filename">要上传的文件</param>
+        </member>
+        <member name="M:Common.FTP.OpenUpload(System.String,System.String)">
+            <summary>
+            上传指定的文件
+            </summary>
+            <param name="filename">本地文件名</param>
+            <param name="remotefilename">远程要覆盖的文件名</param>
+        </member>
+        <member name="M:Common.FTP.OpenUpload(System.String,System.Boolean)">
+            <summary>
+            上传指定的文件
+            </summary>
+            <param name="filename">本地文件名</param>
+            <param name="resume">如果存在,则尝试恢复</param>
+        </member>
+        <member name="M:Common.FTP.OpenUpload(System.String,System.String,System.Boolean)">
+            <summary>
+            上传指定的文件
+            </summary>
+            <param name="filename">本地文件名</param>
+            <param name="remote_filename">远程要覆盖的文件名</param>
+            <param name="resume">如果存在,则尝试恢复</param>
+        </member>
+        <member name="M:Common.FTP.OpenDownload(System.String)">
+            <summary>
+            下载指定文件
+            </summary>
+            <param name="filename">远程文件名称</param>
+        </member>
+        <member name="M:Common.FTP.OpenDownload(System.String,System.Boolean)">
+            <summary>
+            下载并恢复指定文件
+            </summary>
+            <param name="filename">远程文件名称</param>
+            <param name="resume">如文件存在,则尝试恢复</param>
+        </member>
+        <member name="M:Common.FTP.OpenDownload(System.String,System.String)">
+            <summary>
+            下载指定文件
+            </summary>
+            <param name="filename">远程文件名称</param>
+            <param name="localfilename">本地文件名</param>
+        </member>
+        <member name="M:Common.FTP.OpenDownload(System.String,System.String,System.Boolean)">
+            <summary>
+            打开并下载文件
+            </summary>
+            <param name="remote_filename">远程文件名称</param>
+            <param name="local_filename">本地文件名</param>
+            <param name="resume">如果文件存在则恢复</param>
+        </member>
+        <member name="M:Common.FTP.DoUpload">
+            <summary>
+            上传文件(循环调用直到上传完毕)
+            </summary>
+            <returns>发送的字节数</returns>
+        </member>
+        <member name="M:Common.FTP.DoDownload">
+            <summary>
+            下载文件(循环调用直到下载完毕)
+            </summary>
+            <returns>接收到的字节点</returns>
+        </member>
+        <member name="P:Common.FTP.IsConnected">
+            <summary>
+            当前是否已连接
+            </summary>
+        </member>
+        <member name="P:Common.FTP.MessagesAvailable">
+            <summary>
+            当message缓冲区有数据则返回
+            </summary>
+        </member>
+        <member name="P:Common.FTP.Messages">
+            <summary>
+            获取服务器状态返回信息, 并清空messages变量
+            </summary>
+        </member>
+        <member name="P:Common.FTP.ResponseString">
+            <summary>
+            最新指令发出后服务器的响应
+            </summary>
+        </member>
+        <member name="P:Common.FTP.BytesTotal">
+             <summary>
+            在一次传输中,发送或接收的字节数
+             </summary>
+        </member>
+        <member name="P:Common.FTP.FileSize">
+             <summary>
+            被下载或上传的文件大小,当文件大小无效时为0
+             </summary>
+        </member>
+        <member name="P:Common.FTP.PassiveMode">
+            <summary>
+            链接模式:
+            true 被动模式 [默认]
+            false: 主动模式
+            </summary>
+        </member>
+        <member name="T:Common.GloabalBusinessFunction">
+            <summary>
+            处理系统中的全局函数，和业务逻辑有关
+            </summary>
+        </member>
+        <member name="M:Common.GloabalBusinessFunction.GetFormCode(Common.GloabalData.FormType)">
+              <summary>  
+              生成单据号  
+              </summary>  
+              <param   name="pFromType"></param>  
+              <returns></returns>  
+        </member>
+        <member name="T:Common.GloabalData">
+            <summary>
+            处理系统中的全局数据
+            </summary>
+        </member>
+        <member name="F:Common.GloabalData.SeperateString">
+            <summary>
+            填空题分隔符
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.GotoDoExamEndOK">
+            <summary>
+            结束考试命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.GotoDoExamEnd">
+            <summary>
+            交卷命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.GotoDoExam">
+            <summary>
+            开始考试命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.SameStudentNumber">
+            <summary>
+            判断是否重复考生命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.ShutDowm">
+            <summary>
+            学生端主动关闭命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.RESTARTCOMPUTER">
+            <summary>
+            重启学生端计算机
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.IAMSTU">
+            <summary>
+            连接成功发送机器号命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.LOGININFO">
+            <summary>
+            登录发送学号命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.CHOICEBLANKRESULT">
+            <summary>
+            发送选择填空题答题结果命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.FILESIZE">
+            <summary>
+            发送文件是否为空或过大命令，空=null，过大=over
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.FILECHANGE">
+            <summary>
+            发送文件是否被创建或删除命令，创建=create，删除=delete
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.HAVEUSB">
+            <summary>
+            发送插入USB命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.HANDINSINGLE">
+            <summary>
+            单独点击交卷命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.HAVENOTCHOICEBLANK">
+            <summary>
+            发送没有选择填空命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.REMINGDERTIME">
+            <summary>
+            考试剩余时间提醒命令，格式为COMMAND$TIME
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.STUPHONENUM">
+            <summary>
+            学生的联系方式
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.NEEDBACKUP">
+            <summary>
+            备份文件命令,备份命令后面加学号和机器号，中间都有$
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.NEEDRESTORE">
+            <summary>
+            需要还原选择填空命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.RELOADCHOICEBLANK">
+            <summary>
+            重新载入选择填空题命令
+            </summary>
+        </member>
+        <member name="F:Common.EclassCommand.RELOADOP">
+            <summary>
+            重新载入操作题命令
+            </summary>
+        </member>
+        <member name="T:Common.GloabalFunction">
+            <summary>
+            处理系统中的全局函数，和业务逻辑无关
+            </summary>
+        </member>
+        <member name="M:Common.GloabalFunction.MakeWaterMark(System.String)">
+              <summary>  
+              生成水印  
+              </summary>  
+              <param name="srcimg">图片文件的源路径</param>  
+              <returns></returns>  
+        </member>
+        <member name="M:Common.GloabalFunction.RemoveHTML(System.String)">
+            <summary >
+            过滤所有的Html标签
+            </summary >
+            <param name="Htmlstring" ></param >
+            <returns ></returns >
+        </member>
+        <member name="M:Common.GloabalFunction.GetImgUrl(System.String)">
+              <summary> 
+              取出HTML内容文本中的图片地址 
+              </summary> 
+              <param   name="HTMLStr">HTMLStr</param> 
+        </member>
+        <member name="M:Common.GloabalFunction.ParseTags(System.String)">
+              <summary> 
+              移除HTML标签 
+              </summary> 
+              <param   name="HTMLStr">HTMLStr</param> 
+        </member>
+        <member name="M:Common.GloabalFunction.CutStringCN(System.Object,System.Int32)">
+            <summary>
+            截取等宽中英文字符串
+            </summary>
+            <param name="str">要截取的字符串</param>
+            <param name="length">要截取的中文字符长度</param>
+            <returns>截取后的字符串</returns>
+        </member>
+        <member name="M:Common.GloabalFunction.CutStringEN(System.String,System.Int32)">
+            <summary>
+            截取等宽中英文字符串
+            </summary>
+            <param name="str">要截取的字符串</param>
+            <param name="length">要截取的中文字符长度</param>
+            <returns>截取后的字符串</returns>
+        </member>
+        <member name="M:Common.GloabalFunction.GetEnglishLength(System.String)">
+            <summary>
+            获取中英文混合字符串的文字长度(1个英文占1个长度，1个汉字占2个长度)
+            </summary>
+            <param name="stringWithEnglishAndChinese">中英文混合的字符串</param>
+            <returns>字符串长度(1个英文占1个长度，1个汉字占2个长度)</returns>
+        </member>
+        <!-- 对于成员“M:Common.ClassImage.MakeThumbnail(System.IO.Stream,System.String,System.Int32,System.Int32,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Common.ClassImage.SavePicture(System.Web.UI.WebControls.FileUpload,System.String,System.Int32,System.Int32)">
+            <summary>      
+            通过FileUpload上传图片并压缩图片大小    
+            四各形式：1)指定高 按比例缩放; 2)指定宽 按比例缩放; 3)不缩放; 4)指定宽高裁剪(不会变形).   
+            </summary>     
+            <param name="fu">FileUpload对象</param>    
+            <param name="file">文件完整路径Path</param>    
+            <param name="width">图片压缩后的宽度</param>  
+            <param name="height">图片压缩后的高度</param> 
+            <returns>返回文件存储的完整路径</returns>
+        </member>
+        <member name="M:Common.ClassImage.DrawImage">
+            <summary>
+            开始绘制水印
+            </summary>
+            <example>
+            <code>
+                Watermark wm = new Watermark();
+                wm.DrawedImagePath= Server.MapPath("") + "/upfile/" + "backlogo.gif";
+                wm.ModifyImagePath=path; 
+                wm.RightSpace=184;
+                wm.BottoamSpace=81;
+                wm.LucencyPercent=50;
+                wm.OutPath=Server.MapPath("") + "/upfile/" + fileName + "_new" + extension;
+                wm.DrawImage();
+                
+                //保存加水印过后的图片,删除原始图片 
+                mFileName=fileName + "_new" + extension;
+                if(File.Exists(path)) {  File.Delete(path); } 
+            </code>
+            </example>
+        </member>
+        <member name="M:Common.ClassImage.SetimageSize(System.Web.UI.WebControls.Image,System.Int32,System.Int32)">
+            <summary>
+            改变图片尺寸
+            </summary>
+        </member>
+        <member name="P:Common.ClassImage.ModifyImagePath">
+            <summary>
+            获取或设置要修改的图像路径
+            </summary>
+        </member>
+        <member name="P:Common.ClassImage.DrawedImagePath">
+            <summary>
+            获取或设置在画的图片路径(水印图片)
+            </summary>
+        </member>
+        <member name="P:Common.ClassImage.RightSpace">
+            <summary>
+            获取或设置水印在修改图片中的右边距
+            </summary>
+        </member>
+        <member name="P:Common.ClassImage.BottoamSpace">
+            <summary>
+            获取或设置水印在修改图片中距底部的高度
+            </summary>
+        </member>
+        <member name="P:Common.ClassImage.LucencyPercent">
+            <summary>
+            获取或设置要绘制水印的透明度,注意是原来图片透明度的百分比
+            </summary>
+        </member>
+        <member name="P:Common.ClassImage.OutPath">
+            <summary>
+            获取或设置要输出图像的路径
+            </summary>
+        </member>
+        <member name="M:Common.ClassJs.Alert(System.String,System.Web.UI.Page)">
+            <summary>
+            弹出JavaScript小窗口
+            </summary>
+            <param name="js">窗口信息</param>
+        </member>
+        <member name="M:Common.ClassJs.Alert(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            弹出消息框并且转向到新的URL
+            </summary>
+            <param name="message">消息内容</param>
+            <param name="toURL">连接地址</param>
+        </member>
+        <member name="M:Common.ClassJs.GoHistory(System.Int32,System.Web.UI.Page)">
+            <summary>
+            回到历史页面
+            </summary>
+            <param name="value">-1/1</param>
+        </member>
+        <member name="M:Common.ClassJs.RefreshParent(System.String,System.Web.UI.Page)">
+            <summary>
+            刷新父窗口
+            </summary>
+        </member>
+        <member name="M:Common.ClassJs.CloseWindow(System.Web.UI.Page,System.String)">
+            <summary>
+            刷新父窗口
+            </summary>
+        </member>
+        <member name="M:Common.ClassJs.RefreshOpener(System.Web.UI.Page)">
+            <summary>
+            刷新打开窗口
+            </summary>
+        </member>
+        <member name="M:Common.ClassJs.OpenWindow(System.String,System.Int32,System.Int32,System.Web.UI.Page)">
+            <summary>
+            打开指定大小的新窗体
+            </summary>
+            <param name="url">地址</param>
+            <param name="width">宽</param>
+            <param name="heigth">高</param>
+            <param name="top">头位置</param>
+            <param name="left">左位置</param>
+        </member>
+        <member name="M:Common.ClassJs.JavaScriptLocationHref(System.String,System.Web.UI.Page)">
+            <summary>
+            转向Url制定的页面
+            </summary>
+            <param name="url">连接地址</param>
+        </member>
+        <member name="M:Common.ClassJs.ShowModalDialogWindow(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Web.UI.Page)">
+            <summary>
+            打开指定大小位置的模式对话框
+            </summary>
+            <param name="webFormUrl">连接地址</param>
+            <param name="width">宽</param>
+            <param name="height">高</param>
+            <param name="top">距离上位置</param>
+            <param name="left">距离左位置</param>
+        </member>
+        <member name="M:Common.ClassJs.ShowModalDialogWindow(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            弹出模态窗口
+            </summary>
+            <param name="webFormUrl"></param>
+            <param name="features"></param>
+        </member>
+        <member name="M:Common.ClassJs.ShowModalDialogJavascript(System.String,System.String)">
+            <summary> 
+            弹出模态窗口 
+            </summary> 
+            <param name="webFormUrl"></param> 
+            <param name="features"></param> 
+            <returns></returns> 
+        </member>
+        <member name="T:Common.ClassDate">
+             <summary>
+            MyDate 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Common.ClassDate.GetDaysOfYear(System.Int32)">
+            <summary>返回本年有多少天</summary>  
+            <param name="iYear">年份</param>  
+            <returns>本年的天数</returns>  
+        </member>
+        <member name="M:Common.ClassDate.GetDaysOfYear(System.DateTime)">
+            <summary>本年有多少天</summary>  
+            <param name="dt">日期</param>  
+            <returns>本天在当年的天数</returns>  
+        </member>
+        <member name="M:Common.ClassDate.GetDaysOfMonth(System.Int32,System.Int32)">
+            <summary>本月有多少天</summary>  
+            <param name="iYear">年</param>  
+            <param name="Month">月</param>  
+            <returns>天数</returns>  
+        </member>
+        <member name="M:Common.ClassDate.GetDaysOfMonth(System.DateTime)">
+            <summary>本月有多少天</summary>  
+            <param name="dt">日期</param>  
+            <returns>天数</returns>  
+        </member>
+        <member name="M:Common.ClassDate.GetWeekNameOfDay(System.DateTime)">
+            <summary>返回当前日期的星期名称</summary>  
+            <param name="dt">日期</param>  
+            <returns>星期名称</returns>  
+        </member>
+        <member name="M:Common.ClassDate.GetWeekNumberOfDay(System.DateTime)">
+            <summary>返回当前日期的星期编号</summary>  
+            <param name="dt">日期</param>  
+            <returns>星期数字编号</returns>  
+        </member>
+        <member name="M:Common.ClassDate.IsRuYear(System.DateTime)">
+            <summary>判断当前日期所属的年份是否是闰年，私有函数</summary>  
+            <param name="dt">日期</param>  
+            <returns>是闰年：True ，不是闰年：False</returns>  
+        </member>
+        <member name="M:Common.ClassDate.IsRuYear(System.Int32)">
+            <summary>判断当前年份是否是闰年，私有函数</summary>  
+            <param name="dt">年份</param>  
+            <returns>是闰年：True ，不是闰年：False</returns>  
+        </member>
+        <member name="M:Common.ClassDate.ConvertStringToDate(System.String)">
+            <summary>  
+            将输入的字符串转化为日期。如果字符串的格式非法，则返回当前日期。  
+            </summary>  
+            <param name="strInput">输入字符串</param>  
+            <returns>日期对象</returns>  
+        </member>
+        <member name="M:Common.ClassDate.ConvertDateToString(System.DateTime,System.String)">
+            <summary>  
+            将日期对象转化为格式字符串  
+            </summary>  
+            <param name="oDateTime">日期对象</param>  
+            <param name="strFormat">  
+            格式：  
+                   "SHORTDATE"===短日期  
+                   "LONGDATE"==长日期  
+                   其它====自定义格式  
+            </param>  
+            <returns>日期字符串</returns>  
+        </member>
+        <member name="M:Common.ClassDate.IsDateTime(System.String)">
+            <summary>  
+            判断是否为合法日期，必须大于1800年1月1日  
+            </summary>  
+            <param name="strDate">输入日期字符串</param>  
+            <returns>True/False</returns>  
+        </member>
+        <member name="M:Common.ClassDate.DateDiff(System.String,System.DateTime,System.DateTime)">
+            <summary>  
+            获取两个日期之间的差值  
+            </summary>  
+            <param name="howtocompare">比较的方式可为：year month day hour minute second</param>  
+            <param name="startDate">开始日期</param>  
+            <param name="endDate">结束日期</param>  
+            <returns>时间差</returns>  
+        </member>
+        <member name="M:Common.ClassDate.CalculateWorkingDays(System.DateTime,System.DateTime,System.Boolean)">
+             <summary>  
+             计算两个日期之间相差的工作日天数  
+             </summary>  
+             <param  name="dtStart">开始日期</param>  
+             <param  name="dtEnd">结束日期</param>  
+             <param  name="Flag">是否除去周六，周日</param>  
+             <returns>Int</returns>  
+        </member>
+        <member name="T:Common.BaseRequest">
+            <summary>
+            定义的处理Request对象的类
+            </summary>
+        </member>
+        <member name="M:Common.BaseRequest.Get(System.String)">
+            <summary>
+            接收传值
+            </summary>
+            <param name="VarName">参数名称</param>
+            <returns>参数对应的值</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetInt(System.String,System.Web.UI.Page)">
+            <summary>
+            GetInt
+            </summary>
+            <param name="varName"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetFloat(System.String,System.Web.UI.Page)">
+            <summary>
+            GetFloat
+            </summary>
+            <param name="varName"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.IsPost">
+            <summary>
+            判断当前页面是否接收到了Post请求
+            </summary>
+            <returns>是否接收到了Post请求</returns>
+        </member>
+        <member name="M:Common.BaseRequest.IsGet">
+            <summary>
+            判断当前页面是否接收到了Get请求
+            </summary>
+            <returns>是否接收到了Get请求</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetServerString(System.String)">
+            <summary>
+            返回指定的服务器变量信息
+            
+            </summary>
+            <param name="strName">服务器变量名</param>
+            <returns>服务器变量信息</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetRawUrl">
+            <summary>
+            获取当前请求的原始 URL(URL 中域信息之后的部分,包括查询字符串(如果存在))
+            </summary>
+            <returns>原始 URL</returns>
+        </member>
+        <member name="M:Common.BaseRequest.IsBrowserGet">
+            <summary>
+            判断当前访问是否来自浏览器软件
+            </summary>
+            <returns>当前访问是否来自浏览器软件</returns>
+        </member>
+        <member name="M:Common.BaseRequest.IsSearchEnginesGet">
+            <summary>
+            判断是否来自搜索引擎链接
+            </summary>
+            <returns>是否来自搜索引擎链接</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetPageName">
+            <summary>
+            获得当前页面的名称
+            </summary>
+            <returns>当前页面的名称</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetParamCount">
+            <summary>
+            返回表单或Url参数的总个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetQParamCount">
+            <summary>
+            GET ParamCount
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetFParamCount">
+            <summary>
+            POST ParamCount
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetCurrentFullHost">
+            <summary>
+            取全IP包括端口
+            </summary>
+            <returns>IP和端口</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetHost">
+            <summary>
+            取主机名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetUrl">
+            <summary>
+            前台URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetReferrer">
+            <summary>
+            来源URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BaseRequest.SaveRequestFile(System.String)">
+            <summary>
+            保存Request文件
+            </summary>
+            <param name="path">保存到文件名</param>
+        </member>
+        <member name="M:Common.BaseRequest.GetIP">
+            <summary>
+            取IP
+            </summary>
+            <returns>返回IP</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetOS">
+            <summary>
+            取操作系统
+            </summary>
+            <returns>返回操作系统</returns>
+        </member>
+        <member name="M:Common.BaseRequest.GetBrowser">
+            <summary>
+            取游览器
+            </summary>
+            <returns>返回游览器</returns>
+        </member>
+        <member name="T:Common.Log">
+            <summary>
+            企业应用框架的日志类
+            </summary>
+            <remarks>此日志类提供高性能的日志记录实现。
+            当调用Write方法时不会造成线程阻塞,而是立即完成方法调用,因此调用线程不用等待日志写入文件之后才返回。</remarks>
+        </member>
+        <member name="M:Common.Log.#ctor">
+            <summary>
+            创建日志对象的新实例，采用默认当前程序位置作为日志路径和默认的每日日志文件类型记录日志
+            </summary>
+        </member>
+        <member name="M:Common.Log.#ctor(Common.LogType)">
+            <summary>
+            创建日志对象的新实例，采用默认当前程序位置作为日志路径并指定日志类型
+            </summary>
+            <param name="t">日志文件创建方式的枚举</param>
+        </member>
+        <member name="M:Common.Log.#ctor(System.String,Common.LogType)">
+            <summary>
+            创建日志对象的新实例，根据指定的日志文件路径和指定的日志文件创建类型
+            </summary>
+            <param name="p">日志文件保存路径</param>
+            <param name="t">日志文件创建方式的枚举</param>
+        </member>
+        <member name="M:Common.Log.Write(Common.Msg)">
+            <summary>
+            写入新日志，根据指定的日志对象Msg
+            </summary>
+            <param name="msg">日志内容对象</param>
+        </member>
+        <member name="M:Common.Log.Write(System.String,Common.MsgType)">
+            <summary>
+            写入新日志，根据指定的日志内容和信息类型，采用当前时间为日志时间写入新日志
+            </summary>
+            <param name="text">日志内容</param>
+            <param name="type">信息类型</param>
+        </member>
+        <member name="M:Common.Log.Write(System.String)">
+            <summary>
+            写入新日志，根据指定的日志内容和信息类型，采用当前时间为日志时间写入新日志
+            </summary>
+            <param name="text">日志内容</param>
+            <param name="type">信息类型</param>
+        </member>
+        <member name="M:Common.Log.Write(System.DateTime,System.String,Common.MsgType)">
+            <summary>
+            写入新日志，根据指定的日志时间、日志内容和信息类型写入新日志
+            </summary>
+            <param name="dt">日志时间</param>
+            <param name="text">日志内容</param>
+            <param name="type">信息类型</param>
+        </member>
+        <member name="M:Common.Log.Write(System.Exception,Common.MsgType)">
+            <summary>
+            写入新日志，根据指定的异常类和信息类型写入新日志
+            </summary>
+            <param name="e">异常对象</param>
+            <param name="type">信息类型</param>
+        </member>
+        <member name="M:Common.Log.Dispose">
+            <summary>
+            销毁日志对象
+            </summary>
+        </member>
+        <member name="T:Common.LogType">
+            <summary>
+            日志类型的枚举
+            </summary>
+            <remarks>日志类型枚举指示日志文件创建的方式，如果日志比较多可考虑每天创建一个日志文件
+            如果日志量比较小可考虑每周、每月或每年创建一个日志文件</remarks>
+        </member>
+        <member name="F:Common.LogType.Daily">
+            <summary>
+            此枚举指示每天创建一个新的日志文件
+            </summary>
+        </member>
+        <member name="F:Common.LogType.Weekly">
+            <summary>
+            此枚举指示每周创建一个新的日志文件
+            </summary>
+        </member>
+        <member name="F:Common.LogType.Monthly">
+            <summary>
+            此枚举指示每月创建一个新的日志文件
+            </summary>
+        </member>
+        <member name="F:Common.LogType.Annually">
+            <summary>
+            此枚举指示每年创建一个新的日志文件
+            </summary>
+        </member>
+        <member name="T:Common.Msg">
+            <summary>
+            表示一个日志记录的对象
+            </summary>
+        </member>
+        <member name="M:Common.Msg.#ctor">
+            <summary>
+            创建新的日志记录实例;日志记录的内容为空,消息类型为MsgType.Unknown,日志时间为当前时间
+            </summary>
+        </member>
+        <member name="M:Common.Msg.#ctor(System.String,Common.MsgType)">
+            <summary>
+            创建新的日志记录实例;日志事件为当前时间
+            </summary>
+            <param name="t">日志记录的文本内容</param>
+            <param name="p">日志记录的消息类型</param>
+        </member>
+        <member name="M:Common.Msg.#ctor(System.DateTime,System.String,Common.MsgType)">
+            <summary>
+            创建新的日志记录实例;
+            </summary>
+            <param name="dt">日志记录的时间</param>
+            <param name="t">日志记录的文本内容</param>
+            <param name="p">日志记录的消息类型</param>
+        </member>
+        <member name="P:Common.Msg.Datetime">
+            <summary>
+            获取或设置日志记录的时间
+            </summary>
+        </member>
+        <member name="P:Common.Msg.Text">
+            <summary>
+            获取或设置日志记录的文本内容
+            </summary>
+        </member>
+        <member name="P:Common.Msg.Type">
+            <summary>
+            获取或设置日志记录的消息类型
+            </summary>
+        </member>
+        <member name="T:Common.MsgType">
+            <summary>
+            日志消息类型的枚举
+            </summary>
+        </member>
+        <member name="F:Common.MsgType.Unknown">
+            <summary>
+            指示未知信息类型的日志记录
+            </summary>
+        </member>
+        <member name="F:Common.MsgType.Information">
+            <summary>
+            指示普通信息类型的日志记录
+            </summary>
+        </member>
+        <member name="F:Common.MsgType.Warning">
+            <summary>
+            指示警告信息类型的日志记录
+            </summary>
+        </member>
+        <member name="F:Common.MsgType.Error">
+            <summary>
+            指示错误信息类型的日志记录
+            </summary>
+        </member>
+        <member name="F:Common.MsgType.Success">
+            <summary>
+            指示成功信息类型的日志记录
+            </summary>
+        </member>
+        <member name="M:Common.CaptureScreen.BySizeGetScreen(System.Int32,System.Int32)">
+            <summary>
+            根据指定大小获取截图
+            </summary>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CaptureScreen.GetFullScreen">
+            <summary>
+            全屏截图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CaptureScreen.GetAppointScreen">
+            <summary>
+            根据指针截图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CaptureScreen.ToByteArray(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            将指定的 Image 内容写入到数组
+            </summary>
+            <param name="img">指定的 Image</param>
+            <param name="imgFormat">指定的 ImageFormat</param>
+        </member>
+        <member name="M:Common.CaptureScreen.ToImage(System.Byte[])">
+            <summary>
+            将指定的数组内容写入到 Image
+            </summary>
+            <param name="byteArray">指定的数组</param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.SQLHelper">
+            <summary>
+            SQLHelper类封装对SQL Server数据库的添加、删除、修改和选择等操作
+            </summary>
+        </member>
+        <member name="F:Common.SQLHelper.myConnection">
+            连接数据源
+        </member>
+        <member name="M:Common.SQLHelper.Open">
+            <summary>
+            打开数据库连接.
+            </summary>
+        </member>
+        <member name="M:Common.SQLHelper.Close">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Common.SQLHelper.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:Common.SQLHelper.RunProc(System.String)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <returns>返回存储过程返回值</returns>
+        </member>
+        <member name="M:Common.SQLHelper.RunProc(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="prams">存储过程所需参数</param>
+            <returns>返回存储过程返回值</returns>
+        </member>
+        <member name="M:Common.SQLHelper.RunProc(System.String,System.Data.SqlClient.SqlDataReader@)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <param name="dataReader">返回存储过程返回值</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunProc(System.String,System.Data.SqlClient.SqlParameter[],System.Data.SqlClient.SqlDataReader@)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <param name="prams">存储过程所需参数</param>
+            <param name="dataSet">返回DataReader对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunProc(System.String,System.Data.DataSet@)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <param name="dataSet">返回DataSet对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunProc(System.String,System.Data.SqlClient.SqlParameter[],System.Data.DataSet@)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <param name="prams">存储过程所需参数</param>
+            <param name="dataSet">返回DataSet对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunSQL(System.String)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Common.SQLHelper.RunSelectSQLToScalar(System.String)">
+            <summary>
+            执行SQL语句,返回第一行，第一列的值
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Common.SQLHelper.RunSelectSQLToScalar(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句,返回第一行，第一列的值
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Common.SQLHelper.RunSQL(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="prams">SQL语句所需参数</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Common.SQLHelper.RunSQL(System.String,System.Data.SqlClient.SqlDataReader@)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>		
+            <param name="dataReader">返回DataReader对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunSQL(System.String,System.Data.SqlClient.SqlParameter[],System.Data.SqlClient.SqlDataReader@)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="prams">SQL语句所需参数</param>
+            <param name="dataReader">返回DataReader对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunSQL(System.String,System.Data.DataSet@)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="dataSet">返回DataSet对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.RunSQL(System.String,System.Data.SqlClient.SqlParameter[],System.Data.DataSet@)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="prams">SQL语句所需参数</param>
+            <param name="dataSet">返回DataSet对象</param>
+        </member>
+        <member name="M:Common.SQLHelper.CreateProcCommand(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            创建一个SqlCommand对象以此来执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <param name="prams">存储过程所需参数</param>
+            <returns>返回SqlCommand对象</returns>
+        </member>
+        <member name="M:Common.SQLHelper.CreateSQLCommand(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            创建一个SqlCommand对象以此来执行存储过程
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="prams">SQL语句所需参数</param>
+            <returns>返回SqlCommand对象</returns>
+        </member>
+        <member name="M:Common.SQLHelper.CreateProcDataAdapter(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            创建一个SqlDataAdapter对象，用此来执行存储过程
+            </summary>
+            <param name="procName">存储过程的名称</param>
+            <param name="prams">存储过程所需参数</param>
+            <returns>返回SqlDataAdapter对象</returns>
+        </member>
+        <member name="M:Common.SQLHelper.CreateSQLDataAdapter(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            创建一个SqlDataAdapter对象，用此来执行SQL语句
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="prams">SQL语句所需参数</param>
+            <returns>返回SqlDataAdapter对象</returns>
+        </member>
+        <member name="M:Common.SQLHelper.CreateParam(System.String,System.Data.SqlDbType,System.Int32,System.Data.ParameterDirection,System.Object)">
+            <summary>
+            生成存储过程参数
+            </summary>
+            <param name="ParamName">存储过程名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Size">参数大小</param>
+            <param name="Direction">参数方向</param>
+            <param name="Value">参数值</param>
+            <returns>新的 parameter 对象</returns>
+        </member>
+        <!-- 对于成员“M:Common.SQLHelper.CreateInParam(System.String,System.Data.SqlDbType,System.Int32,System.Object)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Common.SQLHelper.CreateOutParam(System.String,System.Data.SqlDbType,System.Int32)">
+            <summary>
+            传入返回值参数
+            </summary>
+            <param name="ParamName">存储过程名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Size">参数大小</param>
+            <returns>新的 parameter 对象</returns>
+        </member>
+        <member name="M:Common.SQLHelper.CreateReturnParam(System.String,System.Data.SqlDbType,System.Int32)">
+            <summary>
+            传入返回值参数
+            </summary>
+            <param name="ParamName">存储过程名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Size">参数大小</param>
+            <returns>新的 parameter 对象</returns>
+        </member>
+        <member name="M:Common.SQLHelper.ConvertDataReaderToDataTable(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            将DataReader转为DataTable
+            </summary>
+            <param name="DataReader">DataReader</param>
+        </member>
+        <member name="T:Common.ClassError">
+            <summary>
+            错误处理函数，用于记录错误日志
+            </summary>
+        </member>
+        <member name="M:Common.ClassError.CreateErrorLog(System.String)">
+            <summary>
+            记录日志至文本文件
+            </summary>
+            <param name="message">记录的内容</param>
+        </member>
+        <member name="T:Common.SystemException">
+            <summary>
+            自定义Exception
+            </summary>
+        </member>
+        <member name="M:Common.SystemException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            包含系统Excepton
+            </summary>
+        </member>
+        <member name="M:Common.SystemException.#ctor(System.String,System.String)">
+            <summary>
+            不包含系统Excepton
+            </summary>			
+        </member>
+        <member name="E:Common.TeacherSocket.OnClientMsg">
+            <summary>
+            显示事件
+            </summary>
+            
+        </member>
+        <member name="T:Common.BasePage">
+            <summary>
+            定义的重新处理页面类
+            </summary>
+        </member>
+    </members>
+</doc>
